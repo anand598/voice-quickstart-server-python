@@ -58,7 +58,7 @@ def placeCall():
 @app.route('/', methods=['GET', 'POST'])
 def welcome():
   resp = twilio.twiml.Response()
-  resp.say("Welcome to Vinay's Amazon web services")
+  resp.say("Welcome to Teletext Holidays United Kingdom")
   return str(resp)
 
 if __name__ == "__main__":
