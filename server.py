@@ -59,11 +59,11 @@ def placeCall():
 def welcome():
   
   
-response = VoiceResponse()
-dial = Dial()
+response = twilio.twiml.VoiceResponse()
+dial = twilio.twiml.Dial()
 dial.number('+91-779-957-9996')
 response.append(dial)
-
+return str(resp)
  
 #   resp = twilio.twiml.Response()
 #   resp.say("Welcome to Teletext Holidays United Kingdom")
