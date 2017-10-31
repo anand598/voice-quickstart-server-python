@@ -59,7 +59,7 @@ def placeCall():
 def welcome():
   
   
-response = twilio.twiml.VoiceResponse()
+response = twilio.twiml.Response()
 dial = twilio.twiml.Dial()
 dial.number('+91-779-957-9996')
 response.append(dial)
