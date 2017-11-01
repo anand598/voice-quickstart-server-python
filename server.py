@@ -59,15 +59,15 @@ def placeCall():
 def welcome():
   
   
-response = twilio.twiml.Response()
-dial = twilio.twiml.Dial()
-dial.number('+91-779-957-9996')
-response.append(dial)
-return str(response)
+# response = twilio.twiml.Response()
+# dial = twilio.twiml.Dial()
+# dial.number('+91-779-957-9996')
+# response.append(dial)
+# return str(response)
  
-#   resp = twilio.twiml.Response()
-#   resp.say("Welcome to Teletext Holidays United Kingdom")
-#   return str(resp)
+  resp = twilio.twiml.Response()
+  resp.say("Welcome to Teletext Holidays United Kingdom")
+  return str(resp)
 
 if __name__ == "__main__":
   port = int(os.environ.get("PORT", 5000))
