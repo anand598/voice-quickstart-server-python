@@ -1,8 +1,9 @@
 import os
-from flask import Flask, request
+from flask import Flask, request,redirect
 from twilio.jwt.access_token import AccessToken, VoiceGrant
 from twilio.rest import Client
 import twilio.twiml
+from twilio.twiml.voice_response import VoiceResponse
 
 ACCOUNT_SID = 'AC***'
 API_KEY = 'SK***'
@@ -59,17 +60,18 @@ def placeCall():
 def welcome():
   
   
-# response = twilio.twiml.VoiceResponse()
-# dial = twilio.twiml.Dial()
-# dial.number('+91-779-957-9996')
-# response.append(dial)
-# response.say('Goodbye')
+response = twilio.twiml.VoiceResponse()
+response.say("Welcome to Teletext Holidays")
+dial = twilio.twiml.Dial()
+dial.number('+91-779-957-9996')
+response.append(dial)
+response.say('Goodbye')
 
 # # return str(response)
  
-  resp = twilio.twiml.Response()
-  resp.say("Welcome to Teletext Holidays United Kingdom")
-  return str(resp)
+#   resp = twilio.twiml.Response()
+#   resp.say("Welcome to Teletext Holidays United Kingdom")
+#   return str(resp)
 
 if __name__ == "__main__":
   port = int(os.environ.get("PORT", 5000))
