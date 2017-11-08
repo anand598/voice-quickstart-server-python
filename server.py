@@ -89,9 +89,9 @@ def welcome():
     resp.say('Welcome to Teletext Holidays United Kingdom')
     return str(resp)
 
-dial = Dial(caller_id='+917799579996')
-dial.number('+917799579996')
-response.append(dial)
+# dial = Dial(caller_id='+917799579996')
+# dial.number('+917799579996')
+# response.append(dial)
 
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 5000))
