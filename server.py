@@ -63,10 +63,10 @@ def welcome():
   resp.say("Welcome to Teletext")
   return str(resp)
 
-response = twilio.twiml.VoiceResponse()
-dial = Dial(caller_id='+917799579996')
-response.dial('779-957-9996')
-response.say('Goodbye')
+# response = twilio.twiml.VoiceResponse()
+# dial = Dial(caller_id='+917799579996')
+# response.dial('779-957-9996')
+# response.say('Goodbye')
 
 print(response)
 if __name__ == "__main__":
