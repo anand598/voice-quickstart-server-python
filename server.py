@@ -1,9 +1,8 @@
 import os
-from flask import Flask, request, redirect
+from flask import Flask, request
 from twilio.jwt.access_token import AccessToken, VoiceGrant
 from twilio.rest import Client
 import twilio.twiml
-from twilio.twiml.voice_response import Dial, Number, VoiceResponse
 
 ACCOUNT_SID = 'AC***'
 API_KEY = 'SK***'
@@ -58,9 +57,8 @@ def placeCall():
 
 @app.route('/', methods=['GET', 'POST'])
 def welcome():
-  
   resp = twilio.twiml.Response()
-  resp.say("Welcome to Teletext Holidays United Kingdom")
+  resp.say("Welcome to Twilio")
   return str(resp)
 
 if __name__ == "__main__":
