@@ -3,6 +3,8 @@ from flask import Flask, request
 from twilio.jwt.access_token import AccessToken, VoiceGrant
 from twilio.rest import Client
 import twilio.twiml
+from twilio.twiml.voice_response import Dial, VoiceResponse, Say
+
 
 ACCOUNT_SID = 'AC***'
 API_KEY = 'SK***'
@@ -61,6 +63,12 @@ def welcome():
   resp.say("Welcome to Teletext")
   return str(resp)
 
+response = twilio.twiml.VoiceResponse()
+dial = Dial(caller_id='+917799579996')
+response.dial('779-957-9996')
+response.say('Goodbye')
+
+print(response)
 if __name__ == "__main__":
   port = int(os.environ.get("PORT", 5000))
   app.run(host='0.0.0.0', port=port, debug=True)
